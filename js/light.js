@@ -18,8 +18,8 @@
 
     function clearLights() {
         Array.prototype.forEach.call(bulbs, function(bulb) {
-            console.log(bulb.tagName);
-            bulb.style.backgroundColor = "#111111";
+            //console.log(bulb.tagName);
+            bulb.style.backgroundColor = '#111111';
         });
     }
 
@@ -38,8 +38,8 @@
 
 
     Array.prototype.forEach.call(buttons, function(button) {
-        console.log(button.tagName);
-        button.addEventListener('click', turnOnLight, false);
+        //console.log(button.tagName);
+        button["addEventListener"]('click', turnOnLight, false);
     });
 
 })();
