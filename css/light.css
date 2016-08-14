@@ -11,7 +11,7 @@ body {
 }
 
 .button {
-  background-color: gray;
+  background: gray;
   color: white;
   border-radius: 1rem;
   padding: 2rem;
@@ -24,7 +24,7 @@ body {
   height: 55rem;
   width: 20rem;
   float: left;
-  background-color: #333333;
+  background: #333333;
   border-radius: 4rem;
   margin: 3rem 0;
   padding: 2rem;
@@ -33,7 +33,7 @@ body {
 .bulb {
   height: 15rem;
   width: 15rem;
-  background-color: #111111;
+  background: #111111;
   border-radius: 50%;
   margin: 2.5rem auto;
   transition: background 800ms ease-in-out;

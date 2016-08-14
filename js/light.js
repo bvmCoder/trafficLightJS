@@ -1,41 +1,45 @@
-function _id(id){
-  return document.getElementById(id);
-}
+(function() {
+    'use strict';
 
-function _class(className){
-  return document.getElementsByClassName(className);
-}
+    function _id(id) {
+        return document.getElementById(id);
+    }
 
-function _queSelAll(query){
-  return document.querySelectorAll(query);
-}
+    function _class(className) {
+        return document.getElementsByClassName(className);
+    }
 
-var buttons = _queSelAll('.button');
-var bulbs = _queSelAll('.bulb');
+    function _queSelAll(query) {
+        return document.querySelectorAll(query);
+    }
 
-function clearLights() {
-  Array.prototype.forEach.call(bulbs , function(bulb) {
-    console.log(bulb.tagName);
-    bulb.style.backgroundColor = "#111111";
-  });
-}
+    var buttons = _queSelAll('.button');
+    var bulbs = _queSelAll('.bulb');
 
-function turnOnLight(){
-  clearLights();
-  var clickedElement = this;
+    function clearLights() {
+        Array.prototype.forEach.call(bulbs, function(bulb) {
+            console.log(bulb.tagName);
+            bulb.style.backgroundColor = "#111111";
+        });
+    }
 
-  if(clickedElement.id === 'stopButton'){
-    _id('stopLight').style.backgroundColor = 'red';
-  } else if(clickedElement.id === 'slowButton'){
-    _id('slowLight').style.backgroundColor = 'yellow';
-  } else {
-    _id('goLight').style.backgroundColor = 'green';
-  }
-}
+    function turnOnLight() {
+        clearLights();
+        var clickedElement = this;
+
+        if (clickedElement.id === 'stopButton') {
+            _id('stopLight').style.backgroundColor = 'red';
+        } else if (clickedElement.id === 'slowButton') {
+            _id('slowLight').style.backgroundColor = 'yellow';
+        } else {
+            _id('goLight').style.backgroundColor = 'green';
+        }
+    }
 
 
-Array.prototype.forEach.call(buttons , function(button) {
-    console.log(button.tagName);
-    button.addEventListener('click', turnOnLight, false);
-});
+    Array.prototype.forEach.call(buttons, function(button) {
+        console.log(button.tagName);
+        button.addEventListener('click', turnOnLight, false);
+    });
 
+})();
