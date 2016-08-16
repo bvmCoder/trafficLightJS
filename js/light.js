@@ -23,8 +23,9 @@
         });
     }
 
-    function turnOnLight() {
+    function turnOnLight(event) {
         clearLights();
+        console.log(event);
         var clickedElement = this;
 
         if (clickedElement.id === 'stopButton') {
