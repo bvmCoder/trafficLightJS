@@ -45,7 +45,7 @@
     });
 
 
-    function Building(floors) {
+    function Building (floors) {
         this.what = "Building"
         this.floors = floors
     }
@@ -57,5 +57,17 @@
 
     yourHouse.countFloors()
     theOffice.countFloors()
+
+    const Yurt = function (ribs) {
+        this.ribs = ribs
+
+    }
+    Yurt.prototype.countribs = function () {
+        if (this.ribs >= 10) {
+           console.log("Yumy Food!")
+        } else {
+            console.log("It's Okay with Quantity!")
+        }
+    }
 
 })();
