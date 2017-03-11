@@ -44,4 +44,18 @@
         button["addEventListener"]('click', turnOnLight, false)
     });
 
+
+    function Building(floors) {
+        this.what = "Building"
+        this.floors = floors
+    }
+    Building.prototype.countFloors = function () {
+        console.log(`I have ${this.floors} floors!`)
+    }
+    let yourHouse = new Building(2)
+    let theOffice = new Building(52)
+
+    yourHouse.countFloors()
+    theOffice.countFloors()
+
 })();
