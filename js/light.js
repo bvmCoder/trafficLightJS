@@ -12,6 +12,10 @@
     function _queSelAll(query) {
         return document.querySelectorAll(query)
     }
+    
+    const currySum = function() {
+        return [].reduce.call(arguments, (curr, next) => curr + next);
+    }
 
     var buttons = _queSelAll('.button')
     var bulbs = Array.from(_queSelAll('.bulb'))
